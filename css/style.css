@@ -22,6 +22,17 @@ nav{
     overflow: auto;
     background-color: #d2dfe1;
     padding: 2rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 1rem;
+}
+.nav-menu li{
+    list-style: none;
 }
 
 #front-page-container{
@@ -47,47 +58,11 @@ main{
     grid-column-end: 3;
     grid-row-end: 3;
 
-    display: grid;
-    grid-template-areas: "col-1 col-2 col-3";
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
-
-#article-1{
-    /*
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-column-end: 2;
-    grid-row-end: 2;
-
-    /*kunne og skrevet: 
-    grid-area: col-1;
-    */
-    grid-area: 1/1/2/2;
-
-}
-#article-2{
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-column-end: 3;
-    grid-row-end: 2;
-
-    /*kunne og skrevet: 
-    grid-area: col-2;
-    */
-    
-}
-#article-3{
-    grid-column-start: 3;
-    grid-row-start: 1;
-    grid-column-end: 4;
-    grid-row-end: 2;
-    
-    /*kunne og skrevet: 
-    grid-area: col-3;
-    */
-
-}
-
 aside{
     /*grid-area: aside;*/
     grid-column-start: 3;
@@ -106,8 +81,8 @@ footer{
 
 main article{
     /*endret vidde bredde fra hva vi gjorde 05.08*/
-    max-width: 250px;
-    width: 100%;
+    flex-basis: 200px;
+    flex-grow: 1;
     border: 1px solid #d9d9d9;
     padding: 1rem;
 }
@@ -134,7 +109,7 @@ main article{
 /*legge til en active-page id på meny punktet som er landingssiden*/
 
 #active{
-
+    margin: 100%;
 }
 /*for å få det under til å funke så må du sette en klasse som du kaller "button" på <a> som ligger i artikklene*/
 .button {
